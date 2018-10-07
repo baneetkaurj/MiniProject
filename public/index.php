@@ -2,7 +2,7 @@
 
 
 main::start("Mydata.csv");
-main::start("abc.php");
+
 
 class main{
 
@@ -12,9 +12,9 @@ class main{
 
         $records = csv::getRecords($filename);
 
-        $tables = html::generateTable($records);
+        $table = html::generateTable($records);
 
-        system::printPage($tables);
+        system::printPage($table);
 
     }
 }
@@ -31,6 +31,7 @@ class html
         $table .='<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>';
         $table.='<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>';
         $table = '<table border="1">';
+
         $table .= row::tableRow($records);
         $table .= '</table>';
         return $table;
@@ -73,7 +74,7 @@ class row{
         $table = "";
         foreach ($records as $key => $value) {
             $table .= "<tr class= \"<?=($i++%2==1) ? 'odd'  : ''; ?>\">";
-            
+
             foreach ($value as $key2 => $value2) {
                 if($flag){
                     $table .= "<th>".htmlspecialchars($value2)."</th>";

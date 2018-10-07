@@ -1,5 +1,6 @@
-First,Last,UCID,Grade,Term
-Pritam,Bhatkar,pb457,A,Fall
-Aneri,Oza,ao345,B,Spring
-Leena,Patil,lp987,A,Fall
-Pooja,Sheke,pb567,C,Spring
+First,Last,UCID,Grade,Term,City,Department
+Pritam,Bhatkar,pb457,A,Fall,Newark,IS
+Aneri,Oza,ao345,B,Spring,Boston,CS
+Shrikant,Patil,lp987,A,Fall,Newark,EM
+Pooja,Sheke,pb567,C,Spring,Boston,CS
+Sheetal,Patel,sp578,A,Fall,Newark,Civil
